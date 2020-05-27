@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Easy Grid", "Easy Grid\Easy Grid.csproj", "{61520330-BD5F-4AC0-954A-755E5C811FDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{61520330-BD5F-4AC0-954A-755E5C811FDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61520330-BD5F-4AC0-954A-755E5C811FDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61520330-BD5F-4AC0-954A-755E5C811FDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61520330-BD5F-4AC0-954A-755E5C811FDE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {68E7362E-1BAF-4918-BE30-C26674EF3F08}
+	EndGlobalSection
+EndGlobal
