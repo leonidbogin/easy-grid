@@ -33,36 +33,39 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBoxLon1 = new System.Windows.Forms.TextBox();
+            this.textBoxLat1 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxLon2 = new System.Windows.Forms.TextBox();
+            this.textBoxLat2 = new System.Windows.Forms.TextBox();
             this.buttonImport = new System.Windows.Forms.Button();
             this.buttonCoordinatesNext = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(15, 16);
+            this.label1.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.label1.Location = new System.Drawing.Point(26, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(356, 59);
+            this.label1.Size = new System.Drawing.Size(512, 82);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Введите координаты границ будущей сетки или скопируйте их из выделенной области S" +
-    "AS.Planet нажав на кнопку «Импорт из SAS.Planet».";
+            this.label1.Text = resources.GetString("label1.Text");
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(99, 119);
+            this.panel1.Location = new System.Drawing.Point(197, 214);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(195, 100);
+            this.panel1.Size = new System.Drawing.Size(174, 88);
             this.panel1.TabIndex = 6;
             // 
             // pictureBox1
@@ -71,7 +74,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(193, 98);
+            this.pictureBox1.Size = new System.Drawing.Size(172, 86);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -80,70 +83,66 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.textBox5);
-            this.panel2.Controls.Add(this.textBox6);
+            this.panel2.Controls.Add(this.textBoxLon1);
+            this.panel2.Controls.Add(this.textBoxLat1);
             this.panel2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.panel2.Location = new System.Drawing.Point(34, 90);
+            this.panel2.Location = new System.Drawing.Point(82, 169);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(130, 59);
             this.panel2.TabIndex = 7;
             // 
-            // textBox5
+            // textBoxLon1
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox5.Location = new System.Drawing.Point(5, 30);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(118, 21);
-            this.textBox5.TabIndex = 6;
-            this.textBox5.Text = "54.6324953292572";
+            this.textBoxLon1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxLon1.Location = new System.Drawing.Point(5, 30);
+            this.textBoxLon1.Name = "textBoxLon1";
+            this.textBoxLon1.Size = new System.Drawing.Size(118, 21);
+            this.textBoxLon1.TabIndex = 6;
             // 
-            // textBox6
+            // textBoxLat1
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox6.Location = new System.Drawing.Point(5, 5);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(118, 21);
-            this.textBox6.TabIndex = 5;
-            this.textBox6.Text = "54.6324953292572";
+            this.textBoxLat1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxLat1.Location = new System.Drawing.Point(5, 5);
+            this.textBoxLat1.Name = "textBoxLat1";
+            this.textBoxLat1.Size = new System.Drawing.Size(118, 21);
+            this.textBoxLat1.TabIndex = 5;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.textBoxLon2);
+            this.panel3.Controls.Add(this.textBoxLat2);
             this.panel3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.panel3.Location = new System.Drawing.Point(228, 188);
+            this.panel3.Location = new System.Drawing.Point(358, 288);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(130, 59);
             this.panel3.TabIndex = 8;
             // 
-            // textBox1
+            // textBoxLon2
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(5, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(118, 21);
-            this.textBox1.TabIndex = 6;
-            this.textBox1.Text = "54.6324953292572";
+            this.textBoxLon2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxLon2.Location = new System.Drawing.Point(5, 30);
+            this.textBoxLon2.Name = "textBoxLon2";
+            this.textBoxLon2.Size = new System.Drawing.Size(118, 21);
+            this.textBoxLon2.TabIndex = 6;
             // 
-            // textBox2
+            // textBoxLat2
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(5, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(118, 21);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.Text = "54.6324953292572";
+            this.textBoxLat2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxLat2.Location = new System.Drawing.Point(5, 5);
+            this.textBoxLat2.Name = "textBoxLat2";
+            this.textBoxLat2.Size = new System.Drawing.Size(118, 21);
+            this.textBoxLat2.TabIndex = 5;
             // 
             // buttonImport
             // 
             this.buttonImport.BackColor = System.Drawing.SystemColors.Control;
             this.buttonImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonImport.Location = new System.Drawing.Point(18, 282);
+            this.buttonImport.Location = new System.Drawing.Point(3, 413);
             this.buttonImport.Name = "buttonImport";
-            this.buttonImport.Size = new System.Drawing.Size(146, 39);
+            this.buttonImport.Size = new System.Drawing.Size(184, 37);
             this.buttonImport.TabIndex = 9;
             this.buttonImport.Text = "Импорт из SAS.Planet";
             this.buttonImport.UseVisualStyleBackColor = false;
@@ -153,32 +152,44 @@
             this.buttonCoordinatesNext.BackColor = System.Drawing.SystemColors.Control;
             this.buttonCoordinatesNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCoordinatesNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonCoordinatesNext.Location = new System.Drawing.Point(276, 283);
+            this.buttonCoordinatesNext.Location = new System.Drawing.Point(482, 413);
             this.buttonCoordinatesNext.Name = "buttonCoordinatesNext";
-            this.buttonCoordinatesNext.Size = new System.Drawing.Size(95, 39);
+            this.buttonCoordinatesNext.Size = new System.Drawing.Size(95, 37);
             this.buttonCoordinatesNext.TabIndex = 10;
             this.buttonCoordinatesNext.Text = "Далее";
             this.buttonCoordinatesNext.UseVisualStyleBackColor = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.panel2);
+            this.groupBox1.Controls.Add(this.panel3);
+            this.groupBox1.Controls.Add(this.panel1);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox1.Location = new System.Drawing.Point(3, 1);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(574, 404);
+            this.groupBox1.TabIndex = 12;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "1. Ввод координат границ сетки";
             // 
             // UserControlСoordinates
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonCoordinatesNext);
             this.Controls.Add(this.buttonImport);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label1);
             this.Name = "UserControlСoordinates";
-            this.Size = new System.Drawing.Size(388, 335);
+            this.Size = new System.Drawing.Size(580, 455);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -189,12 +200,13 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxLon1;
+        private System.Windows.Forms.TextBox textBoxLat1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxLon2;
+        private System.Windows.Forms.TextBox textBoxLat2;
         private System.Windows.Forms.Button buttonImport;
         private System.Windows.Forms.Button buttonCoordinatesNext;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
