@@ -39,6 +39,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.buttonImport = new System.Windows.Forms.Button();
+            this.buttonCoordinatesNext = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -137,18 +138,34 @@
             // 
             // buttonImport
             // 
-            this.buttonImport.Location = new System.Drawing.Point(18, 289);
+            this.buttonImport.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonImport.Location = new System.Drawing.Point(18, 282);
             this.buttonImport.Name = "buttonImport";
-            this.buttonImport.Size = new System.Drawing.Size(172, 26);
+            this.buttonImport.Size = new System.Drawing.Size(146, 39);
             this.buttonImport.TabIndex = 9;
             this.buttonImport.Text = "Импорт из SAS.Planet";
-            this.buttonImport.UseVisualStyleBackColor = true;
+            this.buttonImport.UseVisualStyleBackColor = false;
+            // 
+            // buttonCoordinatesNext
+            // 
+            this.buttonCoordinatesNext.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonCoordinatesNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCoordinatesNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonCoordinatesNext.Location = new System.Drawing.Point(276, 283);
+            this.buttonCoordinatesNext.Name = "buttonCoordinatesNext";
+            this.buttonCoordinatesNext.Size = new System.Drawing.Size(95, 39);
+            this.buttonCoordinatesNext.TabIndex = 10;
+            this.buttonCoordinatesNext.Text = "Далее";
+            this.buttonCoordinatesNext.UseVisualStyleBackColor = false;
             // 
             // UserControlСoordinates
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.buttonCoordinatesNext);
             this.Controls.Add(this.buttonImport);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -178,5 +195,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button buttonImport;
+        private System.Windows.Forms.Button buttonCoordinatesNext;
     }
 }
