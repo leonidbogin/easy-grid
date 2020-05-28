@@ -12,6 +12,8 @@ namespace Easy_Grid
 {
     public partial class FormMain : Form
     {
+        private Coordinates lastCoordinates;
+
         public FormMain()
         {
             InitializeComponent();
@@ -27,11 +29,27 @@ namespace Easy_Grid
             CheckCoordinates();
         }
 
-        public void CheckCoordinates()
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            CheckCoordinates();
         }
 
-
+        public void CheckCoordinates()
+        {
+            Coordinates newCoordinates = FilesWorker.GetCoordinates();
+            if (newCoordinates != null)
+            { 
+                if (lastCoordinates == null || !Coordinates.Equals(newCoordinates, lastCoordinates))
+                {
+                    
+                    lastCoordinates = newCoordinates;
+                }
+                
+            } 
+            else
+            {
+                MessageBox.Show(CONST.Error.LastSelection, CONST.Error.LastSelectionHeader, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
