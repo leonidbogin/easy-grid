@@ -16,5 +16,22 @@ namespace Easy_Grid
         {
             InitializeComponent();
         }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormMain_Activated(object sender, EventArgs e)
+        {
+            CheckCoordinates();
+        }
+
+        public void CheckCoordinates()
+        {
+
+        }
+
+
     }
 }
