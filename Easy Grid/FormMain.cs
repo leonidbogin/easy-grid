@@ -12,7 +12,7 @@ namespace Easy_Grid
 {
     public partial class FormMain : Form
     {
-        private Coordinates lastCoordinates;
+        private Coordinates coordinates;
 
         public FormMain()
         {
@@ -31,6 +31,7 @@ namespace Easy_Grid
 
         private void button1_Click(object sender, EventArgs e)
         {
+            coordinates = null;
             CheckCoordinates();
         }
 
@@ -39,10 +40,11 @@ namespace Easy_Grid
             Coordinates newCoordinates = FilesWorker.GetCoordinates();
             if (newCoordinates != null)
             { 
-                if (lastCoordinates == null || !Coordinates.Equals(newCoordinates, lastCoordinates))
+                if (coordinates == null || !Coordinates.Equals(newCoordinates, coordinates))
                 {
-                    
-                    lastCoordinates = newCoordinates;
+                    coordinates = newCoordinates;
+                    webBrowserMap.Url = new Uri(StaticAPI.GetURL(coordinates));
+                    comboBox1.Text = StaticAPI.GetURL(coordinates);
                 }
                 
             } 

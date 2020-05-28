@@ -28,7 +28,7 @@ namespace Easy_Grid
             return points;
         }
 
-        public Point GetPoints(int index)
+        public Point GetPoint(int index)
         {
             return points[index];
         }
@@ -48,11 +48,16 @@ namespace Easy_Grid
             return double.TryParse(str, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out points[index].lon);
         }
 
+        public Point GetCenter()
+        {
+            return new Point((points[0].lat + points[2].lat) / 2, (points[0].lon + points[2].lon) / 2);
+        }
+
         public static bool Equals(Coordinates c1, Coordinates c2)
         {
             if (c1.zoom != c2.zoom) return false;
             for (int i = 0; i < c1.GetPoints().Length; i++)
-                if (c1.GetPoints(i).Equals(c2.GetPoints(i)))
+                if (c1.GetPoint(i).Equals(c2.GetPoint(i)))
                     return false;
             return true;
         }

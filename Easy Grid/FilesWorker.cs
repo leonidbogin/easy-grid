@@ -34,13 +34,13 @@ namespace Easy_Grid
                         else if (buff.IndexOf(CONST.LastSelection.Lat_4) == 0)
                             coordinates.SetPointLat(buff.Substring(CONST.LastSelection.Lat_4.Length), 3);
                         else if (buff.IndexOf(CONST.LastSelection.Lon_1) == 0)
-                            coordinates.SetPointLat(buff.Substring(CONST.LastSelection.Lon_1.Length), 0);
+                            coordinates.SetPointLon(buff.Substring(CONST.LastSelection.Lon_1.Length), 0);
                         else if (buff.IndexOf(CONST.LastSelection.Lon_2) == 0)
-                            coordinates.SetPointLat(buff.Substring(CONST.LastSelection.Lon_2.Length), 1);
+                            coordinates.SetPointLon(buff.Substring(CONST.LastSelection.Lon_2.Length), 1);
                         else if (buff.IndexOf(CONST.LastSelection.Lon_3) == 0)
-                            coordinates.SetPointLat(buff.Substring(CONST.LastSelection.Lon_3.Length), 2);
+                            coordinates.SetPointLon(buff.Substring(CONST.LastSelection.Lon_3.Length), 2);
                         else if (buff.IndexOf(CONST.LastSelection.Lon_4) == 0)
-                            coordinates.SetPointLat(buff.Substring(CONST.LastSelection.Lon_4.Length), 3);
+                            coordinates.SetPointLon(buff.Substring(CONST.LastSelection.Lon_4.Length), 3);
                     }
                 }
                 catch
