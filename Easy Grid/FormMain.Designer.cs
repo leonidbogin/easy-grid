@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panelButtons = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelParameters = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -37,9 +40,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelMap = new System.Windows.Forms.Panel();
-            this.webBrowserMap = new System.Windows.Forms.WebBrowser();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.webControlMaps = new Awesomium.Windows.Forms.WebControl(this.components);
             this.panelButtons.SuspendLayout();
             this.panelParameters.SuspendLayout();
             this.panelMap.SuspendLayout();
@@ -56,6 +57,26 @@
             this.panelButtons.Name = "panelButtons";
             this.panelButtons.Size = new System.Drawing.Size(586, 84);
             this.panelButtons.TabIndex = 1;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.Location = new System.Drawing.Point(271, 44);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(303, 32);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "Создать для Locus Map";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Location = new System.Drawing.Point(271, 6);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(303, 32);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Создать для Garmin";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -122,47 +143,20 @@
             // 
             // panelMap
             // 
-            this.panelMap.Controls.Add(this.webBrowserMap);
+            this.panelMap.Controls.Add(this.webControlMaps);
             this.panelMap.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMap.Location = new System.Drawing.Point(0, 41);
             this.panelMap.Name = "panelMap";
             this.panelMap.Size = new System.Drawing.Size(586, 373);
             this.panelMap.TabIndex = 3;
             // 
-            // webBrowserMap
+            // webControlMaps
             // 
-            this.webBrowserMap.AllowWebBrowserDrop = false;
-            this.webBrowserMap.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowserMap.IsWebBrowserContextMenuEnabled = false;
-            this.webBrowserMap.Location = new System.Drawing.Point(0, 0);
-            this.webBrowserMap.Margin = new System.Windows.Forms.Padding(0);
-            this.webBrowserMap.Name = "webBrowserMap";
-            this.webBrowserMap.ScrollBarsEnabled = false;
-            this.webBrowserMap.Size = new System.Drawing.Size(586, 373);
-            this.webBrowserMap.TabIndex = 0;
-            this.webBrowserMap.Url = new System.Uri("https://static-maps.yandex.ru/1.x/?ll=27.6374929707889,53.915409267192&size=565,3" +
-        "40&z=14&l=sat,skl", System.UriKind.Absolute);
-            this.webBrowserMap.WebBrowserShortcutsEnabled = false;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(271, 6);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(303, 32);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Создать для Garmin";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(271, 44);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(303, 32);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Создать для Locus Map";
-            this.button3.UseVisualStyleBackColor = true;
+            this.webControlMaps.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webControlMaps.Location = new System.Drawing.Point(0, 0);
+            this.webControlMaps.Size = new System.Drawing.Size(586, 373);
+            this.webControlMaps.Source = new System.Uri("about:blank", System.UriKind.Absolute);
+            this.webControlMaps.TabIndex = 0;
             // 
             // FormMain
             // 
@@ -195,7 +189,6 @@
         private System.Windows.Forms.Panel panelButtons;
         private System.Windows.Forms.Panel panelParameters;
         private System.Windows.Forms.Panel panelMap;
-        private System.Windows.Forms.WebBrowser webBrowserMap;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
@@ -203,6 +196,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
+        private Awesomium.Windows.Forms.WebControl webControlMaps;
     }
 }
 

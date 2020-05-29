@@ -4,12 +4,15 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Easy_Grid
 {
+    [PermissionSet(SecurityAction.Demand, Name = "FullTrust")]
+    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class FormMain : Form
     {
         private Coordinates coordinates;
@@ -44,8 +47,9 @@ namespace Easy_Grid
                 {
                     coordinates = newCoordinates;
                     Grid grid = GeoCalc.GetGrid(coordinates, 500);
-                    webBrowserMap.Url = new Uri(StaticAPI.GetURL(coordinates, grid.line));
-                    comboBox1.Text = StaticAPI.GetURL(coordinates, grid.line);
+                    //webControlMaps.Source = new Uri(StaticAPI.GetURL(coordinates, grid.line));
+                    webControlMaps.Source = new Uri(Application.StartupPath + @"\index.html");
+                    comboBox1.Text = Application.StartupPath + @"\index.html";
                 }
                 
             } 
