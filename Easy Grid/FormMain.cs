@@ -43,8 +43,9 @@ namespace Easy_Grid
                 if (coordinates == null || !Coordinates.Equals(newCoordinates, coordinates))
                 {
                     coordinates = newCoordinates;
-                    webBrowserMap.Url = new Uri(StaticAPI.GetURL(coordinates));
-                    comboBox1.Text = StaticAPI.GetURL(coordinates);
+                    Grid grid = GeoCalc.GetGrid(coordinates, 500);
+                    webBrowserMap.Url = new Uri(StaticAPI.GetURL(coordinates, grid.line));
+                    comboBox1.Text = StaticAPI.GetURL(coordinates, grid.line);
                 }
                 
             } 

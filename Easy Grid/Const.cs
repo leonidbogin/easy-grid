@@ -29,5 +29,18 @@ namespace Easy_Grid
             public static string LastSelection = "Возможно проблема в заключается в том,\nчто программа не расположена в директории SAS Planet.\nЕсли так, закройте программу и переместите её в папку с программой SAS Planet.";
             public static string LastSelectionHeader = "Ошибка копирования из файла LastSelection.hlg";
         }
+
+        public static class Degress
+        {
+            public static double Rad = Math.PI / 180.0;
+            public static double Down = 270.0 * Rad;
+            public static double Right = 0;
+        }
+
+        public static class Planet
+        {
+            public static double Lat = 40035000;
+            public static double Lon = 40075000;
+        }
     }
 }

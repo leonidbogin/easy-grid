@@ -10,11 +10,18 @@ namespace Easy_Grid
     {
         public double lat;
         public double lon;
+        public string name;
 
         public Point(double lat, double lon)
         {
             this.lat = lat;
             this.lon = lon;
+        }
+
+        public Point(Point point)
+        {
+            this.lat = point.lat;
+            this.lon = point.lon;
         }
 
         public Point()
