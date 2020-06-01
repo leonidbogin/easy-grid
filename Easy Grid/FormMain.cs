@@ -40,7 +40,7 @@ namespace Easy_Grid
 
         public void CheckCoordinates()
         {
-            Coordinates newCoordinates = FilesWorker.GetCoordinates();
+            Coordinates newCoordinates = FilesWorker.GetCoordinates(); //new Coordinates();
             if (newCoordinates != null)
             { 
                 if (coordinates == null || !Coordinates.Equals(newCoordinates, coordinates))
@@ -48,8 +48,7 @@ namespace Easy_Grid
                     coordinates = newCoordinates;
                     Grid grid = GeoCalc.GetGrid(coordinates, 500);
                     //webControlMaps.Source = new Uri(StaticAPI.GetURL(coordinates, grid.line));
-                    webControlMaps.Source = new Uri(Application.StartupPath + @"\index.html");
-                    comboBox1.Text = Application.StartupPath + @"\index.html";
+                    webControlMap.Source = new Uri(Application.StartupPath + @"\index.html");
                 }
                 
             } 
