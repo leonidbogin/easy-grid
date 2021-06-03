@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyGrid.UI", "EasyGrid.UI/EasyGrid.UI.csproj", "{AD64A52D-8E4F-4EE5-8183-F000BAF49470}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyGrid.Core", "EasyGrid.Core/EasyGrid.Core.csproj", "{192E7AB8-A1B8-4954-B330-610BF367EBB9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD64A52D-8E4F-4EE5-8183-F000BAF49470}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD64A52D-8E4F-4EE5-8183-F000BAF49470}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD64A52D-8E4F-4EE5-8183-F000BAF49470}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD64A52D-8E4F-4EE5-8183-F000BAF49470}.Release|Any CPU.Build.0 = Release|Any CPU
+		{192E7AB8-A1B8-4954-B330-610BF367EBB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{192E7AB8-A1B8-4954-B330-610BF367EBB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{192E7AB8-A1B8-4954-B330-610BF367EBB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{192E7AB8-A1B8-4954-B330-610BF367EBB9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE5E6A9F-FE03-49C5-B3BF-9B229402762F}
+	EndGlobalSection
+EndGlobal
